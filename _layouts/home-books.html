@@ -8,9 +8,8 @@ layout: default
   {%- endif -%}
 
   {{ content }}
-
+  <h4>These are summaries and hightlights of some of the books I have read. Full list on <a  href="http://goodreads.com/" target="_blank">GoodReads</a></h4>
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
       {%- if post.category == "book summaries" -%}
@@ -29,8 +28,6 @@ layout: default
       {%- endif -%}
       {%- endfor -%}
     </ul>
-
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%}
 
 </div>
